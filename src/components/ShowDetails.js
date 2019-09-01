@@ -3,7 +3,7 @@ import axios from "axios"
 
 const ShowDetails = props => {
   const [show, setShow] = useState([])
-  const [tvId, setTvId] = useState([])
+  // const [tvId, setTvId] = useState([])
 
   const getSomeData = async () => {
     const resp = await axios.get(
