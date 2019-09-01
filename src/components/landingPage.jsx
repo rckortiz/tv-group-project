@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
   const [displayShows, setDisplayShows] = useState([])
+  // const [tvId, setTvId] = useState([])
 
   //  APIKEY = '4d1706050da661b62765277b35357cd7'
 
@@ -11,9 +12,9 @@ const LandingPage = () => {
     const resp = await Axios.get(
       'https://api.themoviedb.org/3/tv/top_rated?api_key=4d1706050da661b62765277b35357cd7&language=en-US&page=1'
     )
-    console.log(resp.data)
+    // console.log(resp.data)
     setDisplayShows(resp.data.results)
-    console.log(displayShows)
+    // console.log(displayShows)
   }
 
   // const randomShow = displayShow => {

@@ -16,8 +16,8 @@ class App extends Component {
               component={ShowDetails}
             ></Route>
           </Switch>
+          <LandingPage />
         </Router>
-        <LandingPage />
       </main>
     )
   }

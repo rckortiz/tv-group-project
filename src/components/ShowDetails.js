@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const ShowDetails = () => {
   const [show, setShow] = useState([])
-  const [tvId, setTvId] = useState([])
+  // const [tvId, setTvId] = useState([])
 
   const getSomeData = async () => {
     const resp = await axios.get(
@@ -21,14 +21,13 @@ const ShowDetails = () => {
 
   return (
     <div>
-      {tvId.map(tv => {
-        return (
-          <ul>
-            <li>{tv.id}</li>
-          </ul>
-        )
-      })}
-      <p>{show.id}</p>
+      <nav>
+        <li>Home</li>
+        <li>About</li>
+      </nav>
+      <h1>{props.name}</h1>
+      <img alt="a thing" src={props.posterPath} />
+      <p>{props.cast}</p>
     </div>
   )
 }
