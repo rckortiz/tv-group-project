@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
   const [displayShows, setDisplayShows] = useState([])
@@ -46,6 +47,7 @@ const LandingPage = () => {
                   }`}
                 ></img>
                 {show.name}
+
                 {show.title}
               </li>
             )
