@@ -19,10 +19,10 @@ const LandingPage = () => {
   //   setDisplayShows(Math.random(displayShow + 1))
   // }
 
-  // useEffect(() => {
-  //   fetchData()
-  //   // randomShow()
-  // }, [])
+  useEffect(() => {
+    fetchData()
+    // randomShow()
+  }, [])
 
   // useEffect(async () => {
   //   const resp = await Axios.get(

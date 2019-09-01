@@ -20,6 +20,10 @@ const ShowDetails = props => {
 
   return (
     <div>
+      <nav>
+        <li>Home</li>
+        <li>About</li>
+      </nav>
       <h1>{props.name}</h1>
       <img alt='a thing' src={props.posterPath} />
       <p>{props.cast}</p>
