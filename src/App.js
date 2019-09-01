@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import ShowDetails from "./components/ShowDetails"
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom"
 import LandingPage from "./components/LandingPage"
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
           <LandingPage />
         </switch>
       </Router>
-    }
+    )
   }
 }
 
