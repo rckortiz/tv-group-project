@@ -10,7 +10,7 @@ const ShowDetails = props => {
       `https://api.themoviedb.org/3/tv/${tvId}/credits?api_key=60f58f18f96b65a50bd5cc31bafb3aac&language=en-US`
     )
     // setTvId(resp) might need to set this to the other api call
-    setShow(resp.data.results)
+    setShow(resp.data)
     console.log(show)
   }
 
