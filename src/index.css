@@ -19,3 +19,7 @@ h1 {
 .info-container {
   background-color: rgb(5, 104, 104);
 }
+
+ul {
+  list-style-type: none;
+}
