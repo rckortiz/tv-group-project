@@ -18,9 +18,9 @@ const LandingPage = () => {
     console.log(displayShows)
   }
 
-  const randomShow = displayShows => {
-    setDisplayShows(Math.ceil(Math.random(displayShows[0])))
-  }
+  // const randomShow = displayShows => {
+  //   setDisplayShows(Math.ceil(Math.random
+  // }
 
   useEffect(() => {
     fetchData()
