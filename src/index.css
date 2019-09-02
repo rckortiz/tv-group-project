@@ -11,3 +11,11 @@ body {
   min-height: 100%;
   background-image: url(./images/show-background.jpg);
 }
+
+h1 {
+  color: rgba(236, 232, 2, 0.993);
+}
+
+.info-container {
+  background-color: rgb(5, 104, 104);
+}
