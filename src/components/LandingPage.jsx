@@ -1,20 +1,22 @@
-import React, { useState, useEffect } from 'react'
-import Axios from 'axios'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from "react"
+import Axios from "axios"
+import { Link } from "react-router-dom"
 
 const LandingPage = () => {
   const [displayShows, setDisplayShows] = useState([])
   // const [tvId, setTvId] = useState([])
+  // const [objectNum, setObjectNum] = useState(0) //trying to get the index from the api call
 
   //  APIKEY = '4d1706050da661b62765277b35357cd7'
 
   const fetchData = async () => {
     const resp = await Axios.get(
-      'https://api.themoviedb.org/3/tv/top_rated?api_key=4d1706050da661b62765277b35357cd7&language=en-US&page=1'
+      "https://api.themoviedb.org/3/tv/top_rated?api_key=4d1706050da661b62765277b35357cd7&language=en-US&page=1"
     )
     // console.log(resp.data)
     setDisplayShows(resp.data.results)
-    // console.log(displayShows)
+    // setObjectNum(resp.data.results) //WTF do I set this too?
+    console.log(resp.data.results)
   }
 
   // const randomShow = displayShow => {
@@ -37,19 +39,22 @@ const LandingPage = () => {
       <header>
         <h1> Top Rated TV shows</h1>
       </header>
-      <section className="showMovies">
+      <section className='showMovies'>
         <ul>
           {displayShows.map(show => {
             return (
               <li key={show.id}>
-                <img
-                  src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${
-                    show['poster_path']
-                  }`}
-                ></img>
-                {show.name}
+                <Link to={`/shows/${show.id}`}>
+                  <img
+                    alt='something'
+                    src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${
+                      show["poster_path"]
+                    }`}
+                  ></img>
+                  {show.name}
 
-                {show.title}
+                  {show.title}
+                </Link>
               </li>
             )
           })}
