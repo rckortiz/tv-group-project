@@ -10,7 +10,11 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path='/' component={LandingPage}></Route>
-            <Route exact path='/shows/:id' component={ShowDetails}></Route>
+            <Route
+              exact
+              path='/showdetails/:id'
+              component={ShowDetails}
+            ></Route>
           </Switch>
         </Router>
       </main>
