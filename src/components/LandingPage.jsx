@@ -5,8 +5,6 @@ import { bold } from "ansi-colors"
 
 const LandingPage = () => {
   const [displayShows, setDisplayShows] = useState([])
-  // const [tvId, setTvId] = useState([])
-  // const [objectNum, setObjectNum] = useState(0) //trying to get the index from the api call
 
   //  APIKEY = '4d1706050da661b62765277b35357cd7'
 
@@ -23,6 +21,12 @@ const LandingPage = () => {
 
   // const randomShow = displayShows => {
   //   setDisplayShows(Math.ceil(Math.random
+
+  const randomPage = Math.ceil(Math.rendom() * 31)
+  //31 is num of pages
+  const randomItem = Math.ceil(Math.random() * 20)
+  //20 is num of items per page
+
   // }
 
   useEffect(() => {
@@ -53,7 +57,6 @@ const LandingPage = () => {
                   }`}
                 ></img>
                 <div className='info-container'>
-                  <p>{show.title}</p>
                   <h1>{show.name}</h1>
 
                   <p style={{ fontWeight: bold }}>{show.overview}</p>
