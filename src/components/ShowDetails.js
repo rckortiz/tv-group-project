@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
+import LandingPage from "./LandingPage"
 
 const ShowDetails = props => {
   const [show, setShow] = useState([])
@@ -25,13 +26,14 @@ const ShowDetails = props => {
   return (
     <div>
       <nav>
-        <li>Home</li>
+        <li>{LandingPage}</li>
         <li>About</li>
-
+      </nav>
+      <ul>
         {show.character.map((character, i) => {
           return <li key={i}>{character}</li>
         })}
-      </nav>
+      </ul>
       {/* <h1>{props.name}</h1> */}
       {/* <img alt="a thing" src={props.posterPath} /> */}
       {/* <p>{props.cast}</p> */}
