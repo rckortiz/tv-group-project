@@ -30,7 +30,7 @@ const ShowDetails = props => {
         <li>About</li>
       </nav>
       <ul>
-        {show.character.map((character, i) => {
+        {show.characters.map((character, i) => {
           return <li key={i}>{character}</li>
         })}
       </ul>

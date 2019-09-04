@@ -10,11 +10,8 @@ const LandingPage = () => {
   //  APIKEY = '4d1706050da661b62765277b35357cd7'
 
   const fetchData = async () => {
-    const randomPage = Math.ceil(Math.random() * 31)
-    //31 is num of pages
-
     const resp = await Axios.get(
-      `https://api.themoviedb.org/3/tv/top_rated?api_key=4d1706050da661b62765277b35357cd7&language=en-US&page=${randomPage}`
+      `https://api.themoviedb.org/3/tv/top_rated?api_key=4d1706050da661b62765277b35357cd7&language=en-US&page=1`
     )
     console.log(resp.data)
     setDisplayShows(resp.data.results)
@@ -24,9 +21,15 @@ const LandingPage = () => {
   }
 
   // const randomShow = () => {
-  //   setDisplayShows(Math.ceil(Math.random
+  //   const randomPage = Math.ceil(Math.random() * 31) //31 is num of pages
+  //   const resp = await Axios.get(
+  //     `https://api.themoviedb.org/3/tv/top_rated?api_key=4d1706050da661b62765277b35357cd7&language=en-US&page=${randomPage}`
+  //     )
+  //     console.log(resp.data)
+  //     setRandomShow(resp.data.results[Math.ceil(Math.random() * 20)])
 
-  // }
+  //     //   setDisplayShows(Math.ceil(Math.random
+  //   }
 
   useEffect(() => {
     fetchData()
