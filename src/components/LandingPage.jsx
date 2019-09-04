@@ -45,6 +45,13 @@ const LandingPage = () => {
   return (
     <main>
       <header>
+        {/* <h1>Random Show</h1>
+        <p>
+          {randomShow.map((show, i) => {
+            ;<li key={i}>{show}</li>
+          })}
+        </p> */}
+
         <h1> Top Rated TV shows</h1>
       </header>
       <section className='showMovies'>

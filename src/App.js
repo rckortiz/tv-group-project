@@ -12,7 +12,7 @@ class App extends Component {
             <Route exact path='/' component={LandingPage}></Route>
             <Route
               exact
-              path='/showdetails/:id'
+              path='./showdetails/:id'
               component={ShowDetails}
             ></Route>
           </Switch>

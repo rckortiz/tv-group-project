@@ -27,16 +27,15 @@ const ShowDetails = props => {
     <div>
       <nav>
         <li>{LandingPage}</li>
-        <li>About</li>
+        {/* <li>About</li> */}
       </nav>
+      <h1>{props.name}</h1>
+      <img alt='a thing' src={props.posterPath} />
       <ul>
         {show.characters.map((character, i) => {
           return <li key={i}>{character}</li>
         })}
       </ul>
-      {/* <h1>{props.name}</h1> */}
-      {/* <img alt="a thing" src={props.posterPath} /> */}
-      {/* <p>{props.cast}</p> */}
     </div>
   )
 }
